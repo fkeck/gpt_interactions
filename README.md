@@ -33,7 +33,7 @@ Linux commands `tar` and `jq` are also required.
 
 ### Data
 
-Data can be found in the `/data` directory. The raw text content of the processed publications can be found on [PubMed OA](https://pmc.ncbi.nlm.nih.gov/tools/openftlist/). The scripts to download, preprocess and generate the raw and intermediate files are in the `R/` directory.
+Data can be found in the `/data` directory. The main data file (data/`save_R_gdata_2.csv.tar.gz`) must be uncompressed to run the analyses. The raw text content of the processed publications can be found on [PubMed OA](https://pmc.ncbi.nlm.nih.gov/tools/openftlist/). The scripts to download, preprocess and generate the raw and intermediate files are in the `R/` directory.
 
 ### Analyses
 
