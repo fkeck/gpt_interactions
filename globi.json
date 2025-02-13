@@ -12,7 +12,7 @@
     } ],
     "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
     "url" : "data/save_R_gdata_2.csv.gz",
-    "dcterms:bibliographicCitation" : "@article {Keck2025.01.24.634685, author = {Keck, Fran{\\c c}ois and Broadbent, Henry and Altermatt, Florian},title = {Extracting massive ecological data on state and interactions of species using large language models},year = {2025},doi = {10.1101/2025.01.24.634685},URL = {https://www.biorxiv.org/content/early/2025/01/27/2025.01.24.634685},journal = {bioRxiv}}",
+    "dcterms:bibliographicCitation" : "@article {Keck2025.01.24.634685, author = {Keck, Fran{\\c c}ois and Broadbent, Henry and Altermatt, Florian},title = {Extracting massive ecological data on state and interactions of species using large language models},year = {2025},doi = {10.1101/2025.01.24.634685},journal = {bioRxiv}}",
     "delimiter" : ",",
     "headerRowCount" : 1,
     "null" : [ "" ],
