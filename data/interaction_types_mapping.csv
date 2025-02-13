@@ -92,3 +92,13 @@ parasitizes,,parasiteOf,http://purl.obolibrary.org/obo/RO_0002444
 protect,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
 induce,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
 antagonize,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+roost,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+roost in,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+use as roosting host,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+share roost with,,coRoostsWith,http://purl.obolibrary.org/obo/RO_0002801
+roost with,,coRoostsWith,http://purl.obolibrary.org/obo/RO_0002801
+use as night roost,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+provide refuge or roosts,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+provide roost sites,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+share roosts,,coRoostsWith,http://purl.obolibrary.org/obo/RO_0002801
+compete for roosts,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
