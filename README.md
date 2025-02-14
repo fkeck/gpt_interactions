@@ -38,3 +38,9 @@ Data can be found in the `/data` directory. The main data file (`data/save_R_gda
 ### Analyses
 
 Scripts can be found in the `/R` directory. They are organized in separated numbered modules. The complete execution can take several hours. The code does not include the interactions with the OpenAI API platform which is subject to a charge.
+
+## Indexing
+
+[![GloBI Review by Elton](../../actions/workflows/review.yml/badge.svg)](../../actions/workflows/review.yml) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:fkeck/gpt_interactions&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:fkeck/gpt_interactions)
+
+This dataset is configured to be indexed by Global Biotic Interactions (GloBI, https://globalbioticinteractions.org).

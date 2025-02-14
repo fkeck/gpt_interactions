@@ -1,0 +1,85 @@
+{
+  "@context" : [ "http://www.w3.org/ns/csvw", {
+    "@language" : "en"
+  } ],
+  "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+  "resources": {
+    "interaction_types_mapping.csv": "data/interaction_types_mapping.csv"
+  },
+  "tables" : [ {
+    "@context" : [ "http://www.w3.org/ns/csvw", {
+      "@language" : "en"
+    } ],
+    "rdfs:comment" : [ "inspired by https://www.w3.org/TR/2015/REC-tabular-data-model-20151217/" ],
+    "url" : "data/save_R_gdata_2.csv.gz",
+    "dcterms:bibliographicCitation" : "@article {Keck2025.01.24.634685, author = {Keck, Fran{\\c c}ois and Broadbent, Henry and Altermatt, Florian},title = {Extracting massive ecological data on state and interactions of species using large language models},year = {2025},doi = {10.1101/2025.01.24.634685},journal = {bioRxiv}}",
+    "delimiter" : ",",
+    "headerRowCount" : 1,
+    "null" : [ "" ],
+    "tableSchema" : {
+      "columns" : [ {
+        "name" : "referenceUrl",
+        "titles" : "ID",
+        "datatype": { 
+          "base" : "string",
+          "valueUrl" : "https://pmc.ncbi.nlm.nih.gov/articles/{referenceUrl}"
+        }
+      }, {
+        "name" : "paragraph",
+        "titles" : "paragraph",
+        "datatype" : "string"
+      },{
+        "name" : "from",
+        "titles" : "from",
+        "datatype" : "string"
+      }, {
+        "name" : "to",
+        "titles" : "to",
+        "datatype" : "string"
+      }, {
+        "name" : "interactionTypeName",
+        "titles" : "label",
+        "datatype" : "string"
+      }, {
+        "name" : "category",
+        "titles" : "category",
+        "datatype" : "string"
+      }, {
+        "name" : "uid.x",
+        "titles" : "uid.x",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonName",
+        "titles" : "from_name",
+        "datatype" : "string"
+      }, {
+        "name" : "rank",
+        "titles" : "rank",
+        "datatype" : "string"
+      }, {
+        "name" : "sourceTaxonId",
+        "titles" : "from_uid",
+        "datatype": { 
+          "base" : "string",
+          "valueUrl" : "NCBI:txid{targetTaxonId}"
+        }
+
+      }, {
+        "name" : "uid.y",
+        "titles" : "uid.y",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonName",
+        "titles" : "to_name",
+        "datatype" : "string"
+      }, {
+        "name" : "targetTaxonId",
+        "titles" : "to_uid",
+        "datatype": { 
+          "base" : "string",
+          "valueUrl" : "NCBI:txid{targetTaxonId}"
+        }
+      } ]
+    }
+  } ]
+}
