@@ -1,0 +1,104 @@
+provided_interaction_type_label,provided_interaction_type_id,mapped_to_interaction_type_label,mapped_to_interaction_type_id
+infect,,pathogenOf,http://purl.obolibrary.org/obo/RO_0002556
+prey on,,preysOn,http://purl.obolibrary.org/obo/RO_0002439
+parasitize,,parasiteOf,http://purl.obolibrary.org/obo/RO_0002444
+consume,,eats,http://purl.obolibrary.org/obo/RO_0002470
+feed on,,eats,http://purl.obolibrary.org/obo/RO_0002470
+compete with,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+associate with,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+interact with,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+transmit,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+infest,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+cause,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+attack,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+affect,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+hunt,,preysOn,http://purl.obolibrary.org/obo/RO_0002439
+kill,,kills,http://purl.obolibrary.org/obo/RO_0002626
+compete,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+predate,,preysOn,http://purl.obolibrary.org/obo/RO_0002439
+eat,,eats,http://purl.obolibrary.org/obo/RO_0002470
+colonize,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+graze,,eats,http://purl.obolibrary.org/obo/RO_0002470
+inhibit,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+inhabit,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+vector,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+harbor,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+control,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+outcompete,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+ingest,,eats,http://purl.obolibrary.org/obo/RO_0002470
+prefer,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+damage,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+use,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+forage on,,eats,http://purl.obolibrary.org/obo/RO_0002470
+disperse,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+cause disease,,pathogenOf,http://purl.obolibrary.org/obo/RO_0002556
+associate,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+cause disease in,,pathogenOf,http://purl.obolibrary.org/obo/RO_0002556
+use as host,,hasHost,http://purl.obolibrary.org/obo/RO_0002454
+interact,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+use as intermediate host,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+carry,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+exploit,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+parasitise,,parasiteOf,http://purl.obolibrary.org/obo/RO_0002444
+reduce,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+impact,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+prey upon,,preysOn,http://purl.obolibrary.org/obo/RO_0002439
+suppress,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+avoid,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+depend on,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+scavenge,,eats,http://purl.obolibrary.org/obo/RO_0002470
+contaminate,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+bite,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+displace,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+form symbiosis with,,symbiontOf,http://purl.obolibrary.org/obo/RO_0002440
+influence,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+dominate,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+attract,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+promote growth,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+target,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+capture,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+inhibit growth,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+hybridize,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+benefit,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+threaten,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+utilize,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+compete for,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+select,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+facilitate,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+feed,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+replace,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+live in,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+disperse seeds of,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+predate on,,preysOn,http://purl.obolibrary.org/obo/RO_0002439
+symbiosis,,symbiontOf,http://purl.obolibrary.org/obo/RO_0002440
+nodulate,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+co-infect,,pathogenOf,http://purl.obolibrary.org/obo/RO_0002556
+depredate,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+browse,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+pollinate,,pollinates,http://purl.obolibrary.org/obo/RO_0002455
+coexist,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+cause mortality,,kills,http://purl.obolibrary.org/obo/RO_0002626
+forage,,eats,http://purl.obolibrary.org/obo/RO_0002470
+spread,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+symbiont,,symbiontOf,http://purl.obolibrary.org/obo/RO_0002440
+support,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+hybridize with,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+attach,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+resist,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+co-occur,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+transfer,,vectorOf,http://purl.obolibrary.org/obo/RO_0002459
+degrade,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+parasitizes,,parasiteOf,http://purl.obolibrary.org/obo/RO_0002444
+protect,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+induce,,interactsWith,http://purl.obolibrary.org/obo/RO_0002437
+antagonize,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
+roost,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+roost in,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+use as roosting host,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+share roost with,,coRoostsWith,http://purl.obolibrary.org/obo/RO_0002801
+roost with,,coRoostsWith,http://purl.obolibrary.org/obo/RO_0002801
+use as night roost,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+provide refuge or roosts,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+provide roost sites,,hasRoost,http://purl.obolibrary.org/obo/RO_0008509
+share roosts,,coRoostsWith,http://purl.obolibrary.org/obo/RO_0002801
+compete for roosts,,coOccursWith,http://purl.obolibrary.org/obo/RO_0008506
