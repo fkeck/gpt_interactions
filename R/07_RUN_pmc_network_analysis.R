@@ -17,16 +17,6 @@ simplify_categories <- function(x) {
 }
 
 
-# pal <- c(Parasitism  = "#df89ff",
-#          Predation   = "#73c000",
-#          Competition = "#00c4ff",
-#          Consumption = "#ff8805",
-#          Symbiosis   = "#ff5584",
-#          Mutualism   = "#00bd94",
-#          Herbivory   = "#d3b3b0",
-#          Others      = "#c9c9c9")
-
-
 pal <- c(Parasitism  = "#d17c27",
          Predation   = "#a12a2a",
          Competition = "#094bac",
@@ -35,9 +25,6 @@ pal <- c(Parasitism  = "#d17c27",
          Herbivory   = "#6b8e23",
          Others      = "#c9c9c9")
 
-
-
-# colors <- c("#FF5733", "#33FF57", "#3357FF", "#FF33A6", "#FFD633", "#33FFF6", "#A633FF")
 
 g_data <- read_csv("data/save_R_gdata_2.csv") |> 
   select(-uid.x, -uid.y) |> 
@@ -117,7 +104,7 @@ for (i in names(gs)) {
   
   gs[[i]] <- tbl_graph(edges = g_edges, nodes = g_nodes)
   
-  igraph::write_graph(gs[[i]], paste0("PMC/pmc_ecology/graph_", i,".gml"), format = "gml")
+  # igraph::write_graph(gs[[i]], paste0("PMC/pmc_ecology/graph_", i,".gml"), format = "gml")
 }
 
 
@@ -264,5 +251,65 @@ bind_rows(gs_edges,
 
 
 
+# Preparing data for interactive graph
+
+sigma_g <- gs$Species |> 
+  activate("edges") |> 
+  filter(n > 1) |> 
+  activate("nodes") |> 
+  mutate(component = group_components()) |> 
+  group_by(component) |> 
+  mutate(n_comp = n()) |> 
+  ungroup() |> 
+  filter(n_comp == max(n_comp))
 
 
+# Use Gephi for layout
+layout_sigma_g <-
+  jsonlite::fromJSON("graph_OO.json")$nodes$attributes |> 
+  as_tibble() |> 
+  select(x, y, node_key = nodekey)
+
+sigma_g <- sigma_g |>
+  left_join(layout_sigma_g, by = "node_key")
+    
+
+
+classif <- read_rds("PMC/pmc_ecology/save_R_uids_split_classif_raw.rds")
+classif <- unlist(classif, recursive = FALSE)
+classif <- classif[map_lgl(classif, is.data.frame)]
+classif <- classif |>
+  bind_rows(.id = "grp_id") |> 
+  as_tibble()
+  
+class_names <- vector("character", nrow(as_tibble(sigma_g)))
+names(class_names) <- as_tibble(sigma_g)$node_key
+
+for(i in as_tibble(sigma_g)$node_key) {
+  print(i)
+  
+  grp_id <- classif$grp_id[classif$id == i][1]
+  class_name <- c(
+    classif[classif$grp_id == grp_id & (classif$rank == "class"),]$name,
+    classif[classif$grp_id == grp_id & (classif$rank == "phylum"),]$name
+  )[1]
+  if(length(class_name) == 0L) class_name <- NA_character_
+  class_names[i] <- class_name
+}
+
+sigma_g <- sigma_g |> left_join(
+  enframe(class_names, name = "node_key", value = "class_name"), by = "node_key")
+
+
+
+list(nodes = sigma_g |> 
+       as_tibble() |> 
+       select(key = node_key, label = name_ncbi, cluster = class_name, tag = class_name, x, y),
+     edges = sigma_g |> 
+       activate("edges") |> 
+       as_tibble() |> 
+       mutate(from = as.character(from_uid), to = as.character(to_uid)) |> 
+       select(from, to, category)
+) |> 
+  jsonlite::toJSON(pretty = TRUE) |> 
+  write_lines("dataset.json")
