@@ -175,21 +175,26 @@ resolve_taxo <- function(x, verbose = TRUE,
       }
     }
   }
-  
-  gnr <- resolve(x)$gnr
+  if(!is.na(taxize::gna_verifier(x, data_sources = 1:12)$dataSourceId[1])) {
+    gnr <- taxize::gna_verifier(x, 1:12, all_matches = TRUE) |>
+      janitor::clean_names() |>
+      distinct(data_source_id, .keep_all = TRUE)
+  } else {
+    gnr <- tibble()
+  }
 
   if(nrow(gnr) > 0) {
     if(sum(gnr$submitted_name == gnr$matched_name) > 3) {
       gnr_sci <- TRUE
       if(verbose) cli_alert_info("GNR (>3 matches).")
     } else {
-      if("National Center for Biotechnology Information" %in% gnr$data_source_title) {
+      if("NCBI" %in% gnr$data_source_title_short) {
         gnr <- gnr |>
-          dplyr::filter(data_source_title == "National Center for Biotechnology Information") |> 
-          dplyr::mutate(exact = user_supplied_name == matched_name)
+          dplyr::filter(data_source_title_short == "NCBI") |> 
+          dplyr::mutate(exact = submitted_name == matched_name)
         
-        if(max(gnr$score) > 0.98) {
-          x <- gnr$matched_name[which.max(gnr$score)]
+        if(max(gnr$sort_score) > 9.4) {
+          x <- gnr$matched_name[which.max(gnr$sort_score)]
           gnr_sci <- TRUE
           if(verbose) cli_alert_info("GNR (Score NCBI >0.98).")
         } else {
