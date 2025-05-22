@@ -4,6 +4,8 @@ library(tidygraph)
 library(ggraph)
 library(patchwork)
 
+if (!dir.exists("Figures")) dir.create("Figures")
+
 all_categories <- c("Parasitism", "Predation", "Competition",
                     "Consumption", "Mutualism", "Unspecified",
                     "Amensalism", "Neutralism", "Scavenger",
