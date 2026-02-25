@@ -194,12 +194,12 @@ resolve_taxo <- function(x, verbose = TRUE,
           dplyr::mutate(exact = submitted_name == matched_name)
         
         if(max(gnr$sort_score) > 9.4) {
-          x <- gnr$matched_name[which.max(gnr$sort_score)]
+          x <- gnr$matched_canonical_full[which.max(gnr$sort_score)]
           gnr_sci <- TRUE
           if(verbose) cli_alert_info("GNR (Score NCBI >0.98).")
         } else {
           if(any(gnr$exact)) {
-            x <- gnr$matched_name[gnr$exact][1]
+            x <- gnr$matched_canonical_full[gnr$exact][1]
             gnr_sci <- TRUE
             if(verbose) cli_alert_info("GNR (NCBI exact match).")
           } else {
