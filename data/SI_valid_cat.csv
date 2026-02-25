@@ -1,0 +1,13 @@
+Category,Correct,Missed,Incorrect
+Amensalism,8,2,1
+Commensalism,1,1,0
+Competition,7,1,0
+Consumption,18,11,2
+Detritivore,2,0,0
+Herbivory,11,3,1
+Hybridization,1,0,0
+Mutualism,12,0,0
+Parasitism,111,64,1
+Predation,39,15,0
+Symbiosis,10,1,0
+Unspecified,9,0,1
