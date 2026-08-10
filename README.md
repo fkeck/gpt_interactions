@@ -60,3 +60,6 @@ The analysis is organized into modular R scripts located in the `/R` directory. 
 [![GloBI Review by Elton](../../actions/workflows/review.yml/badge.svg)](../../actions/workflows/review.yml) [![GloBI](https://api.globalbioticinteractions.org/interaction.svg?accordingTo=globi:fkeck/gpt_interactions&refutes=true&refutes=false)](https://globalbioticinteractions.org/?accordingTo=globi:fkeck/gpt_interactions)
 
 This dataset is configured to be indexed by Global Biotic Interactions (GloBI, https://globalbioticinteractions.org).
+The original extracted dataset is in `data/save_R_gdata_2.csv.tar.gz`.
+The GloBI indexed dataset is `data/save_R_gdata_2.csv.gz` and may reflect additional manual corrections.
+
